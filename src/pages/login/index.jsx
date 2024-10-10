@@ -14,6 +14,10 @@ const Login = () => {
 
     const navigate = useNavigate()
 
+    const handleClickSignUp = () => {
+        navigate('/SignUp')
+    }
+
     const { control, handleSubmit, formState: { errors  } } = useForm({
         reValidateMode: 'onChange',
         mode: 'onChange',
@@ -56,7 +60,7 @@ const Login = () => {
                 </form>
                 <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText>Criar Conta</CriarText>
+                    <CriarText onClick={handleClickSignUp}>Criar Conta</CriarText>
                 </Row>
                 </Wrapper>
             </Column>
